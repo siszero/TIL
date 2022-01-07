@@ -2,7 +2,7 @@ package backtracking;
 
 import java.util.Scanner;
 
-public class Permutation_with_repetition {
+public class Permutation_with_repetition2 {
 
 	private static int[] arr; // 숫자 담아둘 배열
 	private static int N, M;
@@ -24,9 +24,12 @@ public class Permutation_with_repetition {
 			System.out.println();
 			return;
 		}
+		System.out.println();
 		// 다 채워지기 전 순회하며 숫자를 선택함
 		for (int i = 1; i <= N; i++) {
+			System.out.println("cnt = " + cnt);
 			arr[cnt] = i;
+			System.out.println("arr[" +cnt + "] = " + arr[cnt]);
 			nPir(cnt + 1);
 		}
 
