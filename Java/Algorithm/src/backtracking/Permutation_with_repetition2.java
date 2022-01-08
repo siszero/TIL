@@ -5,8 +5,9 @@
  * 	- Scanner에 비해 다소 사용하기 불편하지만 많은 양의 데이터를 입력받을경우 BufferedReader로 입력받는 것이 효율적
  * 	- 예외처리를 꼭 해주어야한다.(보편적으로 throws IOException을 통하여 예외처리, try & catch를 활용하여 예외처리 또한 가능)
  *  - Space를 경계로 인식하기 위한 두 가지 방법
- * 		1.  StringTokenizer에 nextToken()함수를 통한 공백 단위의 구분.
+ * 		1. StringTokenizer에 nextToken()함수를 통한 공백 단위의 구분.
  *  	2. String.split 함수를 활용
+ *  BufferWriter 쓸 때 bw.close() 해줘야 함
  */
 
 package backtracking;
@@ -23,23 +24,22 @@ public class Permutation_with_repetition2 {
 	private static int[] arr; // 숫자 담아둘 배열
 	private static int N, M;
 	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-	
+
 	// N까지의 수 중에서 M개 고르기
-	public static void main(String[] args) throws IOException {	// 예외처리
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));	// 선언
+	public static void main(String[] args) throws IOException { // 예외처리
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // 선언
 		// Enter만을 경계로 인식하기에 공백마다 데이터 끊어서 배열에 넣음
 		// String array[] = s.split(" ");
 		String s = br.readLine();
 		N = Integer.parseInt(s.split(" ")[0]);
 		M = Integer.parseInt(s.split(" ")[1]);
 
-
 		arr = new int[M]; // 숫자 담아둘 배열의 크기를 M으로
 		nPir(0); // 처음 0
 		bw.close();
 	}
 
-	private static void nPir(int cnt) throws IOException{
+	private static void nPir(int cnt) throws IOException {
 		if (cnt == M) { // 깊이가 M일 때 즉, 원하는 길이만큼 다 채워지면
 			for (int i = 0; i < M; i++)
 				bw.write(arr[i] + " ");
