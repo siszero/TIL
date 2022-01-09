@@ -1,5 +1,5 @@
 // 풀이 : string으로 입력받고 알파벳 첫 자리만 가져와서 각 배열에 맞는 위치에 1씩 증가시킨다.
-// 주의 : 'a'나 97 빼주고 더해주고
+// 주의 : 'a'나 97(a의 아스키코드)를 빼거나 더하기
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
