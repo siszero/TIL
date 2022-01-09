@@ -20,7 +20,7 @@ public class Combination_with_repetition {
 
 		arr = new int[M];
 		nCr(0, 1);
-		bw.close();		// 필수..
+		bw.close();		// 필수...
 	}
 
 	private static void nCr(int depth, int cur) throws IOException {
