@@ -104,3 +104,39 @@ String에서 + 사용시 기존 값 버리고 새로 할당하기 때문에 1000
 | sb.length() | 길이 확인 |
 | sb.replace(인덱스, 인덱스, 값) | 인덱스부터 인덱스까지 값으로 변경 |
 | sb.reverse() | 글자 순서를 뒤집는다 |
+
+
+### 개선된 for문
+```sh
+   for(자료형 변수명 : 배열명){
+	문장
+   } 
+```
+이 때, 자료형은 한 단계 아래로 적으면 된다.
+ex)
+```sh
+   String[] arr = {"1","2","3","4","5"};
+         
+   for(String s : arr)	  
+      System.out.println(s);
+```
+결과
+1
+2
+3
+4
+5
+
+```sh
+   String[][] arr = {{"1","2","3"},{"2.1","2.2"}};
+         
+   for(String[] arrs : arr)	  
+      for(String s : arrs)
+         System.out.println(s);
+```
+결과
+1
+2
+3
+2.1
+2.2
