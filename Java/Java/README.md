@@ -119,7 +119,7 @@ ex)
    String[] arr = {"1","2","3","4","5"};
          
    for(String s : arr)	  
-      System.out.println(s);
+      System.out.print(s);
 ```
 결과
 >1
@@ -135,7 +135,7 @@ ex)
          
    for(String[] arrs : arr)	  
       for(String s : arrs)
-         System.out.println(s);
+         System.out.print(s);
 ```
 결과
 >1
