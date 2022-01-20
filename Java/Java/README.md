@@ -106,6 +106,55 @@ String에서 + 사용시 기존 값 버리고 새로 할당하기 때문에 1000
 | sb.reverse() | 글자 순서를 뒤집는다 |
 
 
+### HashSet
+Set 인터페이스의 구현 클래스, Set의 성질 그대로 상속받음
+Set의 성질  :  객체 중복 저장 X, 하나의 NULL값만 저장가능, 저장 순서 유지 X
+- 순서대로 입력되지 않고 일정하게 유지되지 않는다.
+- 특징 : 중복을 허용하지 않음
+- HashSet의 경우 정렬을 해주지 않고 TreeSet의 경우 자동정렬을 해준다.
+
+변수 선언
+```sh
+HashSet<Integer> set = new HashSet<Integer>();
+HashSet<String> set2 = new HashSet<String>();
+```
+
+값 추가
+```sh
+set.add(1);
+set.add(2);
+set2.add("a");
+set2.add("b");
+```
+
+값 삭제
+```sh
+set.remove(1);    // 값 1 삭제
+set.clear();      // 전체삭제
+set2.remove("a");    // 문자 a 삭제
+set2.clear();        // 전체 삭제
+```
+
+값 출력
+```sh
+set.add(1);
+set.add(2);
+System.out.println("set의 값 : " + set);
+
+결과
+set의 값 : [1, 2]
+
+Iterator iter = set.iterator();	// Iterator 사용
+while(iter.hasNext()) {//값이 있으면 true 없으면 false
+    System.out.print(iter.next());
+}
+
+결과
+1 2
+```
+
+
+
 ### 개선된 for문
 ```sh
    for(자료형 변수명 : 배열명){
