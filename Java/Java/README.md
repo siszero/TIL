@@ -200,3 +200,66 @@ next()는 문자 혹은 문자열을 공백 기준으로 한 단어 또는 한 �
 
 nextLine()은 문자 혹은 엔터를 치기 전까지의 문장 전체를 입력받는다. 
 - Hello World를 입력받았다면 출력했을 때 Hello World 모두 출력
+
+### ArrayList
+다수의 데이터를 넣기 위한 자료구조
+List 인터페이스를 상속받은 클래스로 크기가 가변적으로 변하는 선형리스트
+
+```sh
+ArrayList list = new ArrayList();//타입 미설정 Object로 선언된다.
+ArrayList<Student> members = new ArrayList<Student>();//타입설정 Student객체만 사용가능
+ArrayList<Integer> num = new ArrayList<Integer>();//타입설정 int타입만 사용가능
+ArrayList<Integer> num2 = new ArrayList<>();//new에서 타입 파라미터 생략가능
+ArrayList<Integer> num3 = new ArrayList<Integer>(10);//초기 용량(capacity)지정
+ArrayList<Integer> list2 = new ArrayList<Integer>(Arrays.asList(1,2,3));//생성시 값추가
+```
+
+ArrayList 값 추가
+```sh
+ArrayList<Integer> list = new ArrayList<Integer>();
+list.add(1); // 값 추가
+list.add(null); // null값도 add가능
+list.add(1,10); // index 1에 10 삽입
+```
+```sh
+ArrayList<Student> members = new ArrayList<Student>();
+Student student = new Student(name,age);
+members.add(student);
+members.add(new Member("홍길동",23));
+```
+
+ArrayList 값 삭제
+```sh
+ArrayList<Integer> list = new ArrayList<Integer>(Arrays.asList(1,2,3));
+list.remove(1);  //index 1 제거
+list.clear();  //모든 값 제거
+```
+
+ArrayList 값 출력
+```sh
+System.out.println(list.get(3));//3번째 index 출력
+
+for(Integer i : list) { //for문을 통한 전체출력
+    System.out.println(i);
+}
+
+Iterator iter = list.iterator(); //Iterator 선언 
+while(iter.hasNext()){//다음값이 있는지 체크
+    System.out.println(iter.next()); //값 출력
+}
+```
+
+[참고][https://coding-factory.tistory.com/551]
+
+
+### 자바 정렬 방법
+Arrays.sort를 사용하는 방법과 Collections.sort를 사용하는 방법
+- Arrays.sort 는 배열 정렬할 때 사용
+- Collections.sort 는 list를 정렬할 때 사용
+
+
+내림차순으로 정렬
+```sh
+Collections.sort(list, Collections.reverseOrder());
+```
+|   정렬 기준 재정의 하지 않았을 때는 오름차순으로 출력됨.
