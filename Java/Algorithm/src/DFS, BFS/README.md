@@ -7,12 +7,15 @@
 
 # 스택 
 먼저 들어온 데이터가 나중에 나가는 형식(선입후출)의 자료구조
+
 ex) 박스쌓기
-[파이썬, 자바 예시]()
+
+[파이썬, 자바 예시](https://github.com/siszero/TIL/blob/main/Java/Algorithm/src/DFS%2C%20BFS/Stack.md)
 
 # 큐
 먼저 들어온 데이터가 먼저 나가는 형식(선입선출)의 자료구조
-[파이썬, 자바 예시]()
+
+[파이썬, 자바 예시](https://github.com/siszero/TIL/blob/main/Java/Algorithm/src/DFS%2C%20BFS/Queue.md)
 
 
 # DFS(Depth-First Search)
