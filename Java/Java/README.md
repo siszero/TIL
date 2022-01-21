@@ -263,3 +263,29 @@ Arrays.sort를 사용하는 방법과 Collections.sort를 사용하는 방법
 Collections.sort(list, Collections.reverseOrder());
 ```
 |   정렬 기준 재정의 하지 않았을 때는 오름차순으로 출력됨.
+
+
+### 길이 확인
+1. length
+ - arrays(int[], double[], String[])
+ - length는 배열(Array)의 길이를 알고자 할때 사용된다.
+
+ 
+2. length()
+ - String related Object(String, StringBuilder etc)
+ - length()는 문자열(String)의 길이를 알고자 할때 사용된다.
+
+ 
+3. size()
+ - Collection Object(ArrayList, Set etc)
+ - size()는 컬렉션프레임워크 타입의 길이를 알고자 할때 사용된다.
+ 
+ 
+### Charater
+1. isUpperCase()        // 대문자 확인 메소드
+2. isLowerCase()        // 소문자 확인 메소드
+3. isDigit()            // 숫자 확인 메소드
+4. toUpperCase()    // 대문자 변환 메소드
+5. toLowerCase()    // 소문자 변환 메소드
+6. isAlphabetic()   // 영문자 확인 메소드(한글 자음,모음 포함)
+7. isLetter()   // 영문자 확인 메소드(한글 자음,모음 포함)
