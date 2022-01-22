@@ -28,7 +28,7 @@ ex) 박스쌓기
 - DFS : [파이썬, 자바 코드](https://github.com/siszero/TIL/blob/main/Java/Algorithm/src/DFS%2C%20BFS/DFS.md)
 
 
-# BFS(Depth-First Search)
+# BFS(Breadth-First Search)
 ### 너비 우선 탐색
 그래프에서 가까운 노드부터 우선적으로 탐색하는 알고리즘
 **큐** 자료구조 이용
