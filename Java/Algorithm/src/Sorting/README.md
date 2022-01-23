@@ -6,7 +6,7 @@
 |   시간복잡도 : O(N^2)   
 |   -> N  +  (N-1)  +  (N-2)  +  ...  +  2   
 
-![선택정렬](https://user-images.githubusercontent.com/64197543/150691242-5ffcb572-ed70-4055-b939-eedfc111d820.png)
+<img src="https://user-images.githubusercontent.com/64197543/150691242-5ffcb572-ed70-4055-b939-eedfc111d820.png"  width="500" height="400"/>
 
 
 ## 삽입 정렬
@@ -14,8 +14,7 @@
 |   시간복잡도 : O(N^2)    
 |   최선의 경우 시간복잡도 : O(N) 
 
-![삽입정렬](https://user-images.githubusercontent.com/64197543/150691205-d4ef5a18-47b8-4387-95dd-f42aa45fa64e.png)
-
+<img src="https://user-images.githubusercontent.com/64197543/150691205-d4ef5a18-47b8-4387-95dd-f42aa45fa64e.png"  width="800" height="700"/>
 
 
 ## 퀵 정렬
