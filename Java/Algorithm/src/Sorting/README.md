@@ -9,12 +9,19 @@
 <img src="https://user-images.githubusercontent.com/64197543/150691242-5ffcb572-ed70-4055-b939-eedfc111d820.png"  width="500" height="400"/>
 
 
+[Python  /  Java  /  C++](https://github.com/siszero/TIL/blob/main/Java/Algorithm/src/Sorting/%EC%84%A0%ED%83%9D%EC%A0%95%EB%A0%AC.md)
+
+
 ## 삽입 정렬
 - 처리되지 않은 데이터를 하나씩 골라 적절한 위치에 삽입하는 것
 |   시간복잡도 : O(N^2)    
 |   최선의 경우 시간복잡도 : O(N) 
 
 <img src="https://user-images.githubusercontent.com/64197543/150691205-d4ef5a18-47b8-4387-95dd-f42aa45fa64e.png"  width="800" height="700"/>
+
+
+[Python  /  Java  /  C++](https://github.com/siszero/TIL/blob/main/Java/Algorithm/src/Sorting/%EC%82%BD%EC%9E%85%EC%A0%95%EB%A0%AC.md)
+
 
 
 ## 퀵 정렬
@@ -26,6 +33,10 @@
 |   최악의 경우 시간복잡도 : O(N^2)   
 
 ![퀵정렬](https://user-images.githubusercontent.com/64197543/150691249-2c2193ac-95e7-45be-a135-897a9bc04641.png)
+
+
+[Python  /  Java  /  C++](https://github.com/siszero/TIL/blob/main/Java/Algorithm/src/Sorting/%ED%80%B5%EC%A0%95%EB%A0%AC.md)
+
 
 
 ## 계수 정렬
@@ -56,3 +67,11 @@
 | 퀵 정렬 | O(NlogN) | O(N) | 대부분의 경우에 적합, 충분히 빠름 |
 | 계수 정렬 | O(N + K) | O(N + K) | 데이터 크기가 한정되어 있는 경우에만 사용가능하지만 매우 빠르게 동작함 |
 
+
+[Python  /  Java  /  C++](https://github.com/siszero/TIL/blob/main/Java/Algorithm/src/Sorting/%EA%B3%84%EC%88%98%EC%A0%95%EB%A0%AC.md)
+
+
+
+
+
+[참고 - 이코테 2021](https://youtu.be/KGyK-pNvWos)
