@@ -265,6 +265,38 @@ Collections.sort(list, Collections.reverseOrder());
 |   정렬 기준 재정의 하지 않았을 때는 오름차순으로 출력됨.
 
 
+
+### 배열 복사 방법
+
+**copyOf**
+- Arrays.copyOf( 복사할 배열, 복사할 배열의 크기 );
+```sh
+   int [] arr1 = {1, 2, 3, 4, 5};
+   int [] arr2 = Arrays.copyOf(arr1, arr1.length);
+   for(int i =0; i < arr2.length; i++) 
+      System.out.print(arr2[i] + " ");
+```
+실행 결과   
+1  2  3  4  5   
+
+
+**copyOfRange** 
+- copyOfRange( 배열, 시작 인덱스, 끝 인덱스 )
+-  원본 배열을 먼저 넣고, 복사를 시작할 인덱스와 마지막 인덱스를 받는다. 이때, 시작 인덱스는 포함하지만 끝 인덱스는 제외한다.
+
+```
+   int [] arr1 = {1, 2, 3};
+   int [] arr3 = Arrays.copyOfRange(arr1, 0, 4); // 특정범위를 지정해서 해당부분만 복사가능
+   for(int i =0; i < arr3.length; i++)
+      System.out.print(arr3[i] + " ");
+```
+실행 결과   
+1  2  3  0   
+
+-> 나머지 초과된 범위의 값은 0 으로 채워진다.   
+
+
+
 ### 길이 확인
 1. length
  - arrays(int[], double[], String[])
