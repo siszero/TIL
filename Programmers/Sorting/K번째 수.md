@@ -2,7 +2,7 @@
 
 ## 설명
 1. ArrayList 사용 -> Collections.sort()로 정렬
-2. 
+2. 배열 인덱스는 0으로 시작하므로 -1 해주기
 
 
 ## java
