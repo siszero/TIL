@@ -1,0 +1,95 @@
+# loc 과 iloc을 이용한 원하는 위치의 데이터 추출
+
+- 데이터 생성
+
+```
+import pandas as pd
+
+df = pd.DataFrame({'a' : [i for i in range(1, 11)], 'b' : [i for i in range(11, 21)], 'c' : [i for i in range(21, 31)]})
+```
+```
+df
+```
+![4](https://user-images.githubusercontent.com/64197543/152503024-d882f7a8-d28d-4ab9-83fb-ea242aae02a4.PNG)
+
+
+문제) a, b 열을 추출하라
+```
+df['a', 'b']            # 시리즈 형태로 안되니 데이터프레임 형태로 뽑아오자
+
+df[['a', 'b']]
+```
+
+![1](https://user-images.githubusercontent.com/64197543/152503584-32ee8558-75bb-4add-b213-07daeb3d1722.PNG)
+
+```
+type(df[['a', 'b']])
+```
+실행결과   
+pandas.core.frame.DataFrame   
+
+
+문제)  첫 번째 행의 데이터를 출력하시오.
+```
+df[0]           # 오류
+
+# loc 을 통한 해결
+df.loc[0]
+```
+실행결과   
+![2](https://user-images.githubusercontent.com/64197543/152504167-77b6f2de-ddb9-4a67-85bb-4abb75be7943.PNG)
+
+```
+# 슬라이스도 가능
+df.loc[2:4]
+```
+실행결과   
+![3](https://user-images.githubusercontent.com/64197543/152504170-dce93591-2f1a-439b-a429-e2446eef6a9a.PNG)
+
+
+
+- 인덱스가 문자로 이루어진 데이터 프레임
+```
+index = ['a', 'b', 'd', 'c', 'e', 'f', 'g', 'g', 'h', 'i']
+df = pd.DataFrame({'a' : [i for i in range(1, 11)], 'b' : [i for i in range(11, 21)], 'c' : [i for i in range(21, 31)]}, index = index)
+```
+```
+df.loc[0]           # 오류 (인덱스가 0이 아니라 a,b,c... 로 바뀌었기 때문)
+
+df.loc['a']         # 인덱스가 문자일 땐 이렇게 하기
+
+df.loc['g']         # 인덱스가 g인 데이터 모두 출력
+```
+
+
+#### 문제
+- 열이 a, c 이며 인덱스가 g, i 인 데이터를 출력하시오.
+```
+df.loc[['g', 'i'], ['a', 'c']]
+```
+
+
+- 처음부터 5번째 까지의 데이터와 첫 번째 열과 세 번째 열의 데이터를 추출하시오.
+```
+# iloc 사용한 해결
+
+df.iloc[:5, [0, 2]]
+```
+
+위와 똑같은데 인덱스가 문자인 경우(같음)
+```
+index = ['a', 'b', 'd', 'c', 'e', 'f', 'g', 'g', 'h', 'i']
+df = pd.DataFrame({'a' : [i for i in range(1, 11)], 'b' : [i for i in range(11, 21)], 'c' : [i for i in range(21, 31)]}, index = index)
+```
+```
+df
+```
+실행결과   
+![5](https://user-images.githubusercontent.com/64197543/152505319-eb691a5e-96b5-465d-a7f6-356babb1b322.PNG)
+
+
+```
+df.iloc[:5, [0, 2]]
+```
+실행결과   
+![6](https://user-images.githubusercontent.com/64197543/152505323-baa9f317-19d9-448b-9600-9a9718c952d8.PNG)
