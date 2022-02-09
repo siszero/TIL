@@ -111,7 +111,7 @@ Test Data
 - 최종 모델의 성능을 검증하기 위한 데이터
 - 학습에도 사용되지 않으며 관여하지도 않는 데이터
 
-<문제점>
+<문제점>    
 Valid Data는 학습에 사용되지는 않지만 관여하는 데이터이다. 관여하기 때문에 너무 valid data에 맞추려고 할 수도 있다.  ->  Overfitting    
 Valid 데이터에 Overfitting 될 수도 있음
 
