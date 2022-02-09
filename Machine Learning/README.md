@@ -112,7 +112,7 @@ Test Data
 - 학습에도 사용되지 않으며 관여하지도 않는 데이터
 
 <문제점>
-Valid Data는 학습에 사용되지는 않지만 관여하는 데이터이다. 관여하기 때문에 너무 valid data에 맞추려고 할 수도 있다.  ->  Overfitting
+Valid Data는 학습에 사용되지는 않지만 관여하는 데이터이다. 관여하기 때문에 너무 valid data에 맞추려고 할 수도 있다.  ->  Overfitting    
 Valid 데이터에 Overfitting 될 수도 있음
 
 
@@ -120,7 +120,7 @@ Valid 데이터에 Overfitting 될 수도 있음
 Valid 데이터를 고정하지 않고 계속해서 변경함으로써 Overfitting 되는 것을 막기 위한 방법   
 
 <종류>   
-1. LOOCV (Leave One Out Cross Validation)
+1. LOOCV (Leave One Out Cross Validation)   
 하나의 데이터를 제외하고 모델을 학습한 후 평가
 - 데이터 개수 만큼의 모델을 학습해야 한다.
 - 데이터가 많을 경우 시간이 오래 걸린다. -> 그래서 나온 대안점이 K-Fold
