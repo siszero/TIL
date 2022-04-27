@@ -1,4 +1,4 @@
-# [가장 큰 수](https://programmers.co.kr/learn/courses/30/lessons/42747)
+# [H-Index](https://programmers.co.kr/learn/courses/30/lessons/42747)
 
 ## 설명
 문제이해만 하면 쉽게 풀 수 있는 문제   
