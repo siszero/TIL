@@ -57,3 +57,30 @@ class Solution {
     }
 }
 ```
+
+## 나의 풀이
+
+```java
+import java.util.*;
+
+class Solution {
+    public int[] solution(int[] array, int[][] commands) {
+         int[] answer = new int[commands.length];	// commands.length = 3
+        
+        for(int i = 0; i<commands.length; i++){
+            int[] ans = new int[(commands[i][1]-commands[i][0]+1)];		// commands[0][1]-commands[0][0]+1 = 4
+            int j = -1;
+        	for(int k = (commands[i][0]-1); k<(commands[i][1]); k++){
+        		j++;
+            	ans[j] = array[k];
+            }
+            
+            Arrays.sort(ans);
+
+            answer[i] = ans[(commands[i][2]-1)];
+        }
+        
+        return answer;
+    }
+}
+```
