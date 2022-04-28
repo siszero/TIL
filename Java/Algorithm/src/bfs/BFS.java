@@ -1,5 +1,16 @@
 package bfs;
-
+/*
+7
+8
+0 1
+0 2
+1 3
+1 4
+2 4
+3 5
+4 5
+5 6
+ */
 import java.util.*;
 
 public class BFS {
@@ -16,7 +27,7 @@ public class BFS {
 		for (int i = 0; i < C; i++) {
 			int from = sc.nextInt();
 			int to = sc.nextInt();
-			// 무방향이므로 간선 하나로 양방향 처리
+			// 무향이므로 간선 하나로 양방향 처리
 			adjMatrix[to][from] = adjMatrix[from][to] = 1;
 		}
 
