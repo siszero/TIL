@@ -37,10 +37,32 @@ public class BFS_LinkedList {
 			adjList[to] = new Node(from, adjList[to]);
 		}
 		
-		for (Node head : adjList) {
-			System.out.println(head);
-		}
+//		for (Node head : adjList) {
+//			System.out.println(head);
+//		}
 
+		bfs(adjList, 0);
+	}
+	
+	public static void bfs(Node[] adjList, int start) {
+		Queue<Integer> queue = new LinkedList<Integer>();
+		boolean[] visited = new boolean[N];
+		
+		queue.offer(start);
+		visited[start] = true;
+		
+		while(!queue.isEmpty()) {
+			int current = queue.poll();
+			System.out.println(current);
+			
+			for(Node temp =adjList[current]; temp!= null; temp = temp.link) {
+				if(!visited[temp.vertex]) {
+					queue.offer(temp.vertex);
+					visited[temp.vertex] = true;
+				}
+			}
+		}
+		
 	}
 
 }
