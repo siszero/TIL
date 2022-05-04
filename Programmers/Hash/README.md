@@ -48,6 +48,7 @@ map.getOrDefault(key, 0);       // key 값이 없거나 null이면 0 반환, 있
 
 
 ### 데이터 추출
+1. EntrySet 이용   
 - Map interface의 Entry 메소드를 사용하여 Key 값 Value 값만을 추출할 수 있습니다.
 
 - Entry 생성 시 java.util.Map.Entry를 import 해주어야 하며 HashMap에 지정한 Key와 Value 타입과 맞춰 주어야 합니다.
@@ -74,7 +75,24 @@ for(Entry<Integer, String> entry : map.entrySet()){
 
 ```
 
+2. keySet을 이용한 for문   
 
+```
+for (String key : map.keySet()) {
+    System.out.println(String.format("키 : %s, 값 : %s", key, map.get(key)));
+}
+```
+
+
+3. Iterator를 이용한 while문
+
+```
+Iterator<String> keys = map.keySet().iterator();
+while (keys.hasNext()) {
+    String key = keys.next();
+    System.out.println(String.format("키 : %s, 값 : %s", key, map.get(key)));
+}
+```
 
 
 
