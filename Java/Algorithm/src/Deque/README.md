@@ -1,40 +1,39 @@
-# 그래프
-정점(node)과 그 정점을 연결하는 간선(edge)으로 이루어진 자료구조
-그래프 탐색 : 하나의 정점에서 시작해 차례대로 모든 정점들을 한 번씩 방문한다.
+# Deque
+- Double-Ended Queue
+- 큐의 양쪽에 데이터를 넣고 뺄 수 있는 형태의 자료구조
+- 자료구조에 큐와 스택을 합쳐넣은 상태
 
-# 탐색
-많은 양의 데이터 중에서 원하는 데이터를 찾는 과정
+## 사용방법
+```java
+Deque<String> deque1 = new ArrayDeque<>();
+Deque<String> deque2 = new LinkedBlockingDeque<>();
+Deque<String> deque3 = new ConcurrentLinkedDeque<>();
+Deque<String> linkedList = new LinkedList<>();
+```
 
-# 스택 
-먼저 들어온 데이터가 나중에 나가는 형식(선입후출)의 자료구조
+## 값 추가
+``` java
+deque.addFirst(); // Deque의 앞쪽에 데이터를 삽입, 용량 초과시 Exception
+deque.offerFirst(); //  Deque의 앞쪽에 데이터를 삽입 후 true, 용량 초과시 false
 
-ex) 박스쌓기
+deque.addLast(); // Deque의 뒤쪽에 데이터를 삽입, 용량 초과시 Exception
+deque.add(); // addLast()와 동일
+deque.offerLast(); //Deque의 뒤쪽에 데이터를 삽입 후 true, 용량 초과시 false
+deque.offer(); // offerLast()와 동일
 
-[파이썬, 자바 코드](https://github.com/siszero/TIL/blob/main/Java/Algorithm/src/DFS%2C%20BFS/Stack.md)
+deque.push(); // addFirst()와 동일
+deque.pop(); // removeFirst()와 동일
+```
 
-# 큐
-먼저 들어온 데이터가 먼저 나가는 형식(선입선출)의 자료구조
+## 값 제거
+``` java
+deque.removeFirst(); // Deque의 앞에서 제거, 비어있으면 예외
+deque.remove(); // removeFirst()와 동일
+deque.poll(); // Deque의 앞에서 제거, 비어있으면 null 리턴
+deque.pollFirst(); // poll()과 동일
 
-[파이썬, 자바 코드](https://github.com/siszero/TIL/blob/main/Java/Algorithm/src/DFS%2C%20BFS/Queue.md)
+deque.removeLast(); // Deque의 뒤에서 제거, 비어있으면 예외
+deque.pollLast(); // Deque의 뒤에서 제거, 비어있으면 null 리턴
+```
 
-
-# DFS(Depth-First Search)
-### 깊이 우선 탐색
-**스택** 자료구조(혹은 재귀 함수)를 이용한다.
-1. 탐색 시작 노드를 스택에 삽입하고 방문처리 한다.
-2. 스택의 최상단 노드에 방문하지 않은 인접한 노드가 하나라도 있으면 그 노드를 스택에 넣고 꺼낸다. (인접한 노드를 선택할 때는 가장 작은 숫자 먼저 선택)
-3. 더 이상 2번의 과정을 수행할 수 없을 때까지 반복한다.
-
-- DFS : [파이썬, 자바 코드](https://github.com/siszero/TIL/blob/main/Java/Algorithm/src/DFS%2C%20BFS/DFS.md)
-
-
-# BFS(Breadth-First Search)
-### 너비 우선 탐색
-그래프에서 가까운 노드부터 우선적으로 탐색하는 알고리즘
-**큐** 자료구조 이용
-1. 탐색 시작 노드를 큐에 삽입하고 방문 처리를 한다.
-2. 큐에서 노드를 꺼낸 뒤 해당 노드의 인접 노드 중에서 방문하지 않은 노드를 모두 큐에 넣고 방문처리 한다.
-3. 더 이상 2번의 과정을 수행할 수 없을 때까지 반복한다.
-(방문 기준 : 번호가 낮은 인접 노드 부터)
-
-- BFS : [파이썬, 자바 코드](https://github.com/siszero/TIL/blob/main/Java/Algorithm/src/DFS%2C%20BFS/BFS.md)
+[참고](https://hbase.tistory.com/128)
