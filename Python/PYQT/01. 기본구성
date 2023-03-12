@@ -1,0 +1,87 @@
+# PYQT
+## 1. 기본 창 만들기
+
+### 설명
+- Python + QT
+- QT : C++ 기반 GUI Framework
+- QT를 Python 에서 사용할 수 있게 만든 패키지
+
+
+### 코드
+```Python
+import sys      # 파이썬 인터프리터가 제공하는 변수와 함수를 직접 제어할 수 있게 해주는 모듈
+from PyQt5.QtWidgets import *       # PYQT5 패키지의 QtWidgets 모듈을 가져옴
+
+app = QApplication(sys.argv)        # app 이라는 이름의 객체 생성, PyQt 사용하면 무조건 써야하는 클래스
+                                    # argv는 가변적인 개수의 문자열(arguments vector)
+
+window = QWidget()      # QWidget() : 실제로 화면에 보여지는 윈도우를 생성하는 클래스
+window.show()           # show 메소드 : 창을 띄어줌
+
+app.exec_()             # 닫기 버튼을 누를때까지 루프를 돌면서 GUI 창을 띄어놓음
+```
+
+### 윈도우 타이틀 변경
+- setWindowTitle() 메소드 사용
+```python
+class MyWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+		
+        # 아래 코드 한 줄 추가하면 됨
+        self.setWindowTitle("GUI")
+```
+
+### 윈도우 크기 변경
+- setGeometry() 메소드 사용
+```python
+class MyWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+		
+        # 아래 코드 한 줄 추가하면 됨
+        self.setGeometry(300, 300, 400, 400) # 차례대로 창위치 x,y, 창크기 x,y
+```
+
+
+
+## 2. 위젯
+### 종류
+- 버튼 : 푸시버튼 (QPushButton), 라디오버튼 (QRadioButton), 체크박스 (QCheckBox)
+- 출력 : 한 줄 문자열 (QLabel), 여러 줄 문자열(QTextBrower), 사진 (QPixmap), 작업진행도(QProgressBar)
+- 입력 : 한 줄 문자열 (QLineEdit), 여러 줄 문자열 (QTextEdit, QPlainTextEdit), 여러 개 선택지 중 하나 선택(QComboBox), 상하 버튼으로 숫자 조절(QSpinBox, QDoubleSpinBox), 슬라이드와 다이얼(QSlider, Qdial), 날짜/시간 (QDateTimeEdit, QDateEdit, QTimeEdit)
+
+
+## 3. 시그널 & 슬롯
+- 입력(Input) : 사용자가 버튼 클릭
+- 시그널(Signal) : 위젯에 어떤 입력 들어왔을 때 발생하도록 정의된 이벤트
+- 슬롯(Slot) & 이벤트핸들러 : 시그널 발생했을 때 수행할 함수
+- 시그널은 위젯마다 다르며, 하나의 위젯에 여러 개의 시그널이 존재할 수 있다.
+
+
+```python
+import sys
+from PyQt5.QtWidgets import *
+
+class MyWindow(QWidget):
+
+    def __init__(self):
+        super().__init__()
+        self.initUI()
+        
+    def initUI(self):    
+        btn = QPushButton("button", self)           # btn 이라는 이름으로 QPushButton의 인스턴스가
+        btn.clicked.connect(self.surprise)          # 버튼이 클릭되었을 때 () 안의 메소드(슬롯)과 연결해줌
+
+    def surprise(self):
+        print("surprise")
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    window = MyWindow()
+    window.show()
+    app.exec_()
+```
+
+
+[참고](https://coding-kindergarten.tistory.com/60)
